@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\202119\source\repos\Tournament_420_SkrylevaLianaAleksandrovna\Tournament_420_SkrylevaLianaAleksandrovna\App.xaml
-72017315727
+8269741270
 21227157113
-23-711145529
+241137333248
 18-244310517
-MainWindow.xaml;Pages\AddTournamentPage.xaml;Pages\AuthorizationPage.xaml;Pages\ListApplications.xaml;Pages\ListTournaments.xaml;Pages\MainPage.xaml;Pages\MainPageForOrganzator.xaml;
+MainWindow.xaml;Pages\Add&EditUserPage.xaml;Pages\AddTournamentPage.xaml;Pages\AuthorizationPage.xaml;Pages\ListApplications.xaml;Pages\ListTournaments.xaml;Pages\MainPage.xaml;Pages\MainPageForOrganzator.xaml;
 
 False
 

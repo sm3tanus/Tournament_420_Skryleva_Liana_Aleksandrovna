@@ -24,17 +24,23 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
         public ListApplications()
         {
             InitializeComponent();
+            if (App.authUser.idRole != 6) AddBt.Visibility = Visibility.Hidden;
             ListUsers.ItemsSource = Connection.tournamentDB.Participant.Where(i => i.idRole != 6).ToList();
         }
 
         private void AddBt_Click(object sender, RoutedEventArgs e)
         {
-
+            if (App.authUser.idRole == 6) NavigationService.Navigate(new Add_EditUserPage());
         }
 
         private void ListUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            if (App.authUser.idRole == 6) NavigationService.Navigate(new Add_EditUserPage());
+        }
+        private void ExitBt_Click(object sender, RoutedEventArgs e)
+        {
+            if (App.authUser.idRole == 6) NavigationService.Navigate(new MainPageForOrganzator());
+
         }
     }
 }

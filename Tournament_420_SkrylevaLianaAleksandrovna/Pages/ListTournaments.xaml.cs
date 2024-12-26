@@ -61,7 +61,7 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
 
         private void ExitBt_Click(object sender, RoutedEventArgs e)
         {
-            if (App.authUser.idRole != 6) AddBt.Visibility = Visibility.Hidden;
+            if (App.authUser.idRole == 6) NavigationService.Navigate(new MainPageForOrganzator());
            
         }
     }

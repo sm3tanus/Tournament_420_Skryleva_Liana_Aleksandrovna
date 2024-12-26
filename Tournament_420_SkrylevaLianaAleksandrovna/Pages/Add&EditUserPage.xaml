@@ -5,10 +5,156 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Tournament_420_SkrylevaLianaAleksandrovna.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1080" d:DesignWidth="1920"
       Title="Add_EditUserPage">
-
     <Grid>
-        
+        <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   FontSize="30">Никнейм</TextBlock>
+    <TextBox Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Width="400"
+                 Height="50"
+                 FontSize="20"
+                 Name="nickTb"></TextBox>
+
+    <TextBlock VerticalAlignment="Center"
+           HorizontalAlignment="Right"
+           FontSize="30"
+                   Grid.Row="1">ФИО</TextBlock>
+    <TextBox Grid.Column="1"
+         Grid.ColumnSpan="2"
+         Grid.Row="1"
+         Width="400"
+         Height="50"
+         FontSize="20"
+         Name="fioTb"></TextBox>
+    <TextBlock VerticalAlignment="Center"
+   HorizontalAlignment="Right"
+   FontSize="30"
+           Grid.Row="2">Роль</TextBlock>
+    <ComboBox Grid.Column="1"
+ Grid.ColumnSpan="2"
+ Grid.Row="2"
+ Width="400"
+ Height="50"
+ FontSize="20"
+        Name="RoleCb">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    <TextBlock VerticalAlignment="Center"
+    HorizontalAlignment="Right"
+    FontSize="30"
+            Grid.Row="3">Логин</TextBlock>
+    <TextBox Grid.Column="1"
+  Grid.ColumnSpan="2"
+  Grid.Row="3"
+  Width="400"
+  Height="50"
+  FontSize="20"
+  Name="loginTb"></TextBox>
+    <TextBlock VerticalAlignment="Center"
+  HorizontalAlignment="Right"
+  FontSize="30"
+          Grid.Row="4">Пароль</TextBlock>
+    <TextBox Grid.Column="1"
+Grid.ColumnSpan="2"
+Grid.Row="4"
+Width="400"
+Height="50"
+FontSize="20"
+Name="passwordTb"></TextBox>
+        <TextBlock VerticalAlignment="Center"
+  HorizontalAlignment="Right"
+  FontSize="30"
+          Grid.Row="5">Команда</TextBlock>
+        <ComboBox Grid.Column="1"
+Grid.ColumnSpan="2"
+Grid.Row="5"
+Width="400"
+Height="50"
+FontSize="20"
+       Name="partyCb">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+           <TextBlock VerticalAlignment="Center"
+  HorizontalAlignment="Right"
+  FontSize="30"
+          Grid.Row="6">Турнир(!)</TextBlock>
+   <ComboBox Grid.Column="1"
+Grid.ColumnSpan="2"
+Grid.Row="6"
+Width="400"
+Height="50"
+FontSize="20"
+       Name="tournCb">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock VerticalAlignment="Center"
+HorizontalAlignment="Right"
+FontSize="30"
+        Grid.Row="7">В игре ли (!)</TextBlock>
+        <CheckBox
+            Grid.Row="7"
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Name="playedCheck"></CheckBox>
+        <TextBlock VerticalAlignment="Center"
+HorizontalAlignment="Right"
+FontSize="30"
+        Grid.Row="5"
+                   Grid.Column="3">Статус</TextBlock>
+        <ComboBox Grid.Column="4"
+Grid.ColumnSpan="2"
+Grid.Row="5"
+Width="400"
+Height="50"
+FontSize="20"
+       Name="statusCb">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Grid.ColumnSpan="2"
+            Grid.Column="3"
+Grid.Row="6"
+Width="400"
+Height="50"
+FontSize="20"
+Name="addBt" Background="#FF3E946A" Click="addBt_Click">Добавить</Button>
     </Grid>
 </Page>

@@ -32,3 +32,5 @@ C:\Users\202119\source\repos\Tournament_420_SkrylevaLianaAleksandrovna\Tournamen
 C:\Users\202119\source\repos\Tournament_420_SkrylevaLianaAleksandrovna\Tournament_420_SkrylevaLianaAleksandrovna\obj\Debug\Pages\AddTournamentPage.baml
 C:\Users\202119\source\repos\Tournament_420_SkrylevaLianaAleksandrovna\Tournament_420_SkrylevaLianaAleksandrovna\obj\Debug\Pages\ListApplications.g.cs
 C:\Users\202119\source\repos\Tournament_420_SkrylevaLianaAleksandrovna\Tournament_420_SkrylevaLianaAleksandrovna\obj\Debug\Pages\ListApplications.baml
+C:\Users\202119\source\repos\Tournament_420_SkrylevaLianaAleksandrovna\Tournament_420_SkrylevaLianaAleksandrovna\obj\Debug\Pages\Add&EditUserPage.g.cs
+C:\Users\202119\source\repos\Tournament_420_SkrylevaLianaAleksandrovna\Tournament_420_SkrylevaLianaAleksandrovna\obj\Debug\Pages\Add&EditUserPage.baml

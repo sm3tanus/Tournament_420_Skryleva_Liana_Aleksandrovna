@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_420_SkrylevaLianaAleksandrovna.DB;
 
 namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
 {
@@ -23,6 +24,12 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
         public Add_EditUserPage()
         {
             InitializeComponent();
+            RoleCb.ItemsSource = Connection.tournamentDB.Role.Where(i => i.id != 6).ToList();
+        }
+
+        private void addBt_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
