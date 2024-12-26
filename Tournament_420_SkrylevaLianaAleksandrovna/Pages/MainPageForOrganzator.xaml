@@ -24,7 +24,7 @@
             <Button Name="ExitBt"
 Height="50"
 Margin="5"
-FontSize="20" Background="#FF483569" Click="ParcBt_Click">Назад</Button>
+FontSize="20" Background="#FF483569" Click="ExitBt_Click">Назад</Button>
             <!--<Button Name="FidBackBt"
 Height="50"
 Margin="5"

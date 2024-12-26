@@ -34,5 +34,10 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
         {
             NavigationService.Navigate(new ListApplications());
         }
+
+        private void ExitBt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
