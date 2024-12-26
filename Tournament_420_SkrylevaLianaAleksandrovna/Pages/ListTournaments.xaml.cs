@@ -69,7 +69,7 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
         {
             if (App.authUser.idRole != 6)
             {
-                App.authUser.idTournament ==  ListTournamentsLv.SelectedItem as Tournament)
+                App.authUser.idTournament = (ListTournamentsLv.SelectedItem as Tournament).id;
             }
         }
     }
