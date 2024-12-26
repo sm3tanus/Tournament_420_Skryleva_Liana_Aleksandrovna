@@ -71,6 +71,7 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
             {
                 App.authUser.idTournament = (ListTournamentsLv.SelectedItem as Tournament).id;
                 App.authUser.played = true;
+                MessageBox.Show("Вы успешно записаны на турнир");
             }
         }
     }
