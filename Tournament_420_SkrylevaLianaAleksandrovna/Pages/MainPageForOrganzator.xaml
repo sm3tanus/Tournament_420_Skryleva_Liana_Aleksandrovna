@@ -21,10 +21,10 @@
             Height="50"
             Margin="5"
             FontSize="20" Background="#FF483569" Click="ParcBt_Click">Участники</Button>
-            <Button Name="FidBackBt"
+            <!--<Button Name="FidBackBt"
 Height="50"
 Margin="5"
-FontSize="20" Background="#FF5D3569">Поддержка</Button>
+FontSize="20" Background="#FF5D3569">Поддержка</Button>-->
         </StackPanel>
     </Grid>
 </Page>

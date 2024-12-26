@@ -36,8 +36,17 @@
                  Height="50"
                  FontSize="20"
                  Name="nickTb"></TextBox>
-
-    <TextBlock VerticalAlignment="Center"
+        <TextBlock VerticalAlignment="Center"
+               HorizontalAlignment="Right"
+               FontSize="30"
+                   Grid.Column="3">Ранг</TextBlock>
+        <TextBox Grid.Column="4"
+             Grid.ColumnSpan="2"
+             Width="400"
+             Height="50"
+             FontSize="20"
+             Name="rangTb"></TextBox>
+        <TextBlock VerticalAlignment="Center"
            HorizontalAlignment="Right"
            FontSize="30"
                    Grid.Row="1">ФИО</TextBlock>
@@ -58,7 +67,7 @@
  Width="400"
  Height="50"
  FontSize="20"
-        Name="RoleCb">
+        Name="RoleCb" SelectionChanged="RoleCb_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding name}"/>
@@ -97,7 +106,7 @@ Grid.Row="5"
 Width="400"
 Height="50"
 FontSize="20"
-       Name="partyCb">
+       Name="partyCb" SelectionChanged="partyCb_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding name}"/>
@@ -114,7 +123,7 @@ Grid.Row="6"
 Width="400"
 Height="50"
 FontSize="20"
-       Name="tournCb">
+       Name="tournCb" SelectionChanged="tournCb_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding name}"/>
@@ -135,19 +144,17 @@ FontSize="30"
 HorizontalAlignment="Right"
 FontSize="30"
         Grid.Row="5"
-                   Grid.Column="3">Статус</TextBlock>
+                   Grid.Column="3">Статус заявки</TextBlock>
         <ComboBox Grid.Column="4"
 Grid.ColumnSpan="2"
 Grid.Row="5"
 Width="400"
 Height="50"
 FontSize="20"
-       Name="statusCb">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding name}"/>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
+       Name="statusCb" SelectionChanged="statusCb_SelectionChanged">
+            <ComboBoxItem>Принято</ComboBoxItem>
+            <ComboBoxItem>На рассмотрении</ComboBoxItem>
+            <ComboBoxItem>Отказано</ComboBoxItem>
         </ComboBox>
         <Button Grid.ColumnSpan="2"
             Grid.Column="3"

@@ -38,6 +38,10 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
                     {
                         NavigationService.Navigate(new MainPageForOrganzator());
                     }
+                    else
+                    {
+                        NavigationService.Navigate(new AuthorizationPage());
+                    }
                     
                 }
                 else
