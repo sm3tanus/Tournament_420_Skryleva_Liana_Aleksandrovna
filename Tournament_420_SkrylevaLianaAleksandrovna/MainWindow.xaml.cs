@@ -23,6 +23,7 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new Pages.MainPage());
         }
     }
 }

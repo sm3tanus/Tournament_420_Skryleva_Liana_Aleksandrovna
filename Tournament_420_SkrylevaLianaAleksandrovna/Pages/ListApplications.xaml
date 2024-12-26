@@ -1,0 +1,68 @@
+﻿<Page x:Class="Tournament_420_SkrylevaLianaAleksandrovna.Pages.ListApplications"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tournament_420_SkrylevaLianaAleksandrovna.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ListApplications">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+       
+
+        <Button Grid.Column="6"
+    FontSize="30"
+    Background="#FF1E426B"
+    Name="AddBt" Click="AddBt_Click" 
+    >Добавить</Button>
+   
+        <ListView Grid.Row="3"
+      Name="ListUsers"
+      Grid.ColumnSpan="7"
+      Grid.RowSpan="5" d:ItemsSource="{d:SampleData ItemCount=5}"
+      FontSize="20" SelectionChanged="ListUsers_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                   >
+                        <TextBlock Text="{Binding nick}"
+                       Margin="20"></TextBlock>
+                        <TextBlock Text="{Binding Role.name}"
+                        Margin="20"></TextBlock>
+                        <TextBlock Text="{Binding rang}"
+                        Margin="20"></TextBlock>
+                        <TextBlock Text="{Binding Party.name}"
+Margin="20"></TextBlock>
+                        <TextBlock Text="{Binding Tournament.name}"
+Margin="20"></TextBlock>
+                        <TextBlock Text="{Binding status}"
+Margin="20"></TextBlock>
+                     
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

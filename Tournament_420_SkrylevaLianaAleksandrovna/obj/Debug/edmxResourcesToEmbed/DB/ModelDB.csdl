@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TournamentDB_420_SkrylevaLianaAleksandrovnaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Format">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tournament" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Tournament_Format" FromRole="Format" ToRole="Tournament" />
+  </EntityType>
+  <EntityType Name="Match">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="points" Type="Int32" />
+    <Property Name="count" Type="Int32" />
+    <Property Name="finish" Type="Boolean" />
+    <Property Name="idTournament" Type="Int32" />
+    <NavigationProperty Name="Tournament" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Match_Tournament" FromRole="Match" ToRole="Tournament" />
+  </EntityType>
+  <EntityType Name="Party">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Participant" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Party" FromRole="Party" ToRole="Participant" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Participant" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Role" FromRole="Role" ToRole="Participant" />
+  </EntityType>
+  <EntityType Name="Statistic">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="victoryCount" Type="Int32" />
+    <Property Name="defeatCount" Type="Int32" />
+    <Property Name="countPlay" Type="Int32" />
+    <Property Name="idUser" Type="Int32" />
+    <NavigationProperty Name="Participant" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Statistic_Participant" FromRole="Statistic" ToRole="Participant" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="TournamentDB_420_SkrylevaLianaAleksandrovnaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Format" EntityType="Self.Format" />
+    <EntitySet Name="Match" EntityType="Self.Match" />
+    <EntitySet Name="Party" EntityType="Self.Party" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="Statistic" EntityType="Self.Statistic" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Tournament" EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Tournament" />
+    <AssociationSet Name="FK_Tournament_Format" Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Tournament_Format">
+      <End Role="Format" EntitySet="Format" />
+      <End Role="Tournament" EntitySet="Tournament" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Match_Tournament" Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Match_Tournament">
+      <End Role="Tournament" EntitySet="Tournament" />
+      <End Role="Match" EntitySet="Match" />
+    </AssociationSet>
+    <EntitySet Name="Participant" EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Participant" />
+    <AssociationSet Name="FK_Participant_Party" Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Party">
+      <End Role="Party" EntitySet="Party" />
+      <End Role="Participant" EntitySet="Participant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Participant_Role" Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="Participant" EntitySet="Participant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Participant_Tournament" Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Tournament">
+      <End Role="Tournament" EntitySet="Tournament" />
+      <End Role="Participant" EntitySet="Participant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Statistic_Participant" Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Statistic_Participant">
+      <End Role="Participant" EntitySet="Participant" />
+      <End Role="Statistic" EntitySet="Statistic" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Tournament">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <Property Name="idFormat" Type="Int32" />
+    <Property Name="countUser" Type="Int32" />
+    <Property Name="prize" Type="Int32" />
+    <Property Name="minRang" Type="Int32" />
+    <NavigationProperty Name="Format" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Tournament_Format" FromRole="Tournament" ToRole="Format" />
+    <NavigationProperty Name="Match" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Match_Tournament" FromRole="Tournament" ToRole="Match" />
+    <NavigationProperty Name="Participant" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Tournament" FromRole="Tournament" ToRole="Participant" />
+  </EntityType>
+  <Association Name="FK_Tournament_Format">
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Format" Role="Format" Multiplicity="0..1" />
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Tournament" Role="Tournament" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Format">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tournament">
+        <PropertyRef Name="idFormat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Match_Tournament">
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Tournament" Role="Tournament" Multiplicity="0..1" />
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Match" Role="Match" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tournament">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Match">
+        <PropertyRef Name="idTournament" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Participant">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idRole" Type="Int32" />
+    <Property Name="rang" Type="Int32" />
+    <Property Name="idParty" Type="Int32" />
+    <Property Name="idTournament" Type="Int32" />
+    <Property Name="status" Type="Boolean" />
+    <Property Name="played" Type="Boolean" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="Int32" />
+    <Property Name="fio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nick" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Party" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Party" FromRole="Participant" ToRole="Party" />
+    <NavigationProperty Name="Role" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Role" FromRole="Participant" ToRole="Role" />
+    <NavigationProperty Name="Tournament" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Tournament" FromRole="Participant" ToRole="Tournament" />
+    <NavigationProperty Name="Statistic" Relationship="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Statistic_Participant" FromRole="Participant" ToRole="Statistic" />
+  </EntityType>
+  <Association Name="FK_Participant_Party">
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Party" Role="Party" Multiplicity="0..1" />
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Participant" Role="Participant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Party">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Participant">
+        <PropertyRef Name="idParty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Participant_Role">
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Participant" Role="Participant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Participant">
+        <PropertyRef Name="idRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Participant_Tournament">
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Tournament" Role="Tournament" Multiplicity="0..1" />
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Participant" Role="Participant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tournament">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Participant">
+        <PropertyRef Name="idTournament" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Statistic_Participant">
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Participant" Role="Participant" Multiplicity="0..1" />
+    <End Type="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Statistic" Role="Statistic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Participant">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Statistic">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

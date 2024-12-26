@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0231fc3ad2e3422ba62b9b80e1bc3519" Name="Diagram1">
+        <EntityTypeShape EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Format" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Match" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Party" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Role" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Statistic" Width="1.5" PointX="10.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Tournament" Width="1.5" PointX="3" PointY="3.25" />
+        <AssociationConnector Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Tournament_Format" />
+        <AssociationConnector Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Match_Tournament" />
+        <EntityTypeShape EntityType="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Participant" Width="1.5" PointX="8.25" PointY="2.75" />
+        <AssociationConnector Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Party" />
+        <AssociationConnector Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Role" />
+        <AssociationConnector Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Participant_Tournament" />
+        <AssociationConnector Association="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.FK_Statistic_Participant" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

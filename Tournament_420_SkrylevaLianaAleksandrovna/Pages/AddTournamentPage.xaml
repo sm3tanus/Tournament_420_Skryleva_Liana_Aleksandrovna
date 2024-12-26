@@ -1,0 +1,106 @@
+﻿<Page x:Class="Tournament_420_SkrylevaLianaAleksandrovna.Pages.AddTournamentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tournament_420_SkrylevaLianaAleksandrovna.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="AddTournamentPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   FontSize="30">Название</TextBlock>
+        <TextBox Grid.Column="1"
+                 Grid.ColumnSpan="2"
+                 Width="400"
+                 Height="50"
+                 FontSize="20"
+                 Name="NameTb"></TextBox>
+
+        <TextBlock VerticalAlignment="Center"
+           HorizontalAlignment="Right"
+           FontSize="30"
+                   Grid.Row="1">Дата</TextBlock>
+        <DatePicker Grid.Column="1"
+         Grid.ColumnSpan="2"
+         Grid.Row="1"
+         Width="400"
+         Height="50"
+         FontSize="20"
+         Name="dateDp"></DatePicker>
+        <TextBlock VerticalAlignment="Center"
+   HorizontalAlignment="Right"
+   FontSize="30"
+           Grid.Row="2">Формат</TextBlock>
+        <ComboBox Grid.Column="1"
+ Grid.ColumnSpan="2"
+ Grid.Row="2"
+ Width="400"
+ Height="50"
+ FontSize="20"
+        Name="FormatCb" SelectionChanged="FormatCb_SelectionChanged">
+            <ComboBoxItem>1 на 1</ComboBoxItem>
+            <ComboBoxItem>5 на 5</ComboBoxItem>
+        </ComboBox>
+        <TextBlock VerticalAlignment="Center"
+    HorizontalAlignment="Right"
+    FontSize="30"
+            Grid.Row="3">Кол-во игроков</TextBlock>
+        <TextBox Grid.Column="1"
+  Grid.ColumnSpan="2"
+  Grid.Row="3"
+  Width="400"
+  Height="50"
+  FontSize="20"
+  Name="countUserTb"></TextBox>
+        <TextBlock VerticalAlignment="Center"
+  HorizontalAlignment="Right"
+  FontSize="30"
+          Grid.Row="4">Приз</TextBlock>
+        <TextBox Grid.Column="1"
+Grid.ColumnSpan="2"
+Grid.Row="4"
+Width="400"
+Height="50"
+FontSize="20"
+Name="prizeTb"></TextBox>
+        <TextBlock VerticalAlignment="Center"
+  HorizontalAlignment="Right"
+  FontSize="30"
+          Grid.Row="5">Мин. ранг</TextBlock>
+        <TextBox Grid.Column="1"
+Grid.ColumnSpan="2"
+Grid.Row="5"
+Width="400"
+Height="50"
+FontSize="20"
+Name="minrangTb"></TextBox>
+        <Button Grid.ColumnSpan="2"
+Grid.Row="6"
+Width="400"
+Height="50"
+FontSize="20"
+Name="addBt" Background="#FF3E946A" Click="addBt_Click">Добавить</Button>
+    </Grid>
+</Page>

@@ -1,0 +1,30 @@
+﻿<Page x:Class="Tournament_420_SkrylevaLianaAleksandrovna.Pages.MainPageForOrganzator"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tournament_420_SkrylevaLianaAleksandrovna.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="MainPageForOrganzator"
+      >
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Width="300">
+            <Button Name="TournBt"
+         Height="50"
+         Margin="5"
+         FontSize="20" Background="#FF444886" Click="TournBt_Click">Турниры</Button>
+                        <Button Name="ParcBt"
+            Height="50"
+            Margin="5"
+            FontSize="20" Background="#FF483569" Click="ParcBt_Click">Участники</Button>
+            <Button Name="FidBackBt"
+Height="50"
+Margin="5"
+FontSize="20" Background="#FF5D3569">Поддержка</Button>
+        </StackPanel>
+    </Grid>
+</Page>

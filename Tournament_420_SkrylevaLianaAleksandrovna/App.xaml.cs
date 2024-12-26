@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Tournament_420_SkrylevaLianaAleksandrovna.DB;
 
 namespace Tournament_420_SkrylevaLianaAleksandrovna
 {
@@ -13,5 +14,6 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna
     /// </summary>
     public partial class App : Application
     {
+        public static Participant authUser;
     }
 }
