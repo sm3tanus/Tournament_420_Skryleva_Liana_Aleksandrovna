@@ -58,7 +58,7 @@
            Name="ListTournamentsLv"
            Grid.ColumnSpan="7"
            Grid.RowSpan="5" d:ItemsSource="{d:SampleData ItemCount=5}"
-           FontSize="20">
+           FontSize="20" SelectionChanged="ListTournamentsLv_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal"

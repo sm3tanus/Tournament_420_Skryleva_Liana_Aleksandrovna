@@ -64,5 +64,10 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
             if (App.authUser.idRole == 6) NavigationService.Navigate(new MainPageForOrganzator());
            
         }
+
+        private void ListTournamentsLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (App.authUser.idRole == 6) NavigationService.Navigate(new MainPageForOrganzator());
+        }
     }
 }
