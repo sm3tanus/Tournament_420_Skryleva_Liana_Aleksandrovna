@@ -14,12 +14,6 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.DB
     
     public partial class Participant
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Participant()
-        {
-            this.Statistic = new HashSet<Statistic>();
-        }
-    
         public int id { get; set; }
         public Nullable<int> idRole { get; set; }
         public Nullable<int> rang { get; set; }
@@ -35,7 +29,5 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.DB
         public virtual Party Party { get; set; }
         public virtual Role Role { get; set; }
         public virtual Tournament Tournament { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Statistic> Statistic { get; set; }
     }
 }

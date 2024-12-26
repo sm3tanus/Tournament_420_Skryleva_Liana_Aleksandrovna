@@ -17,7 +17,6 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.DB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tournament()
         {
-            this.Match = new HashSet<Match>();
             this.Participant = new HashSet<Participant>();
         }
     
@@ -30,8 +29,6 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.DB
         public Nullable<int> minRang { get; set; }
     
         public virtual Format Format { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Match> Match { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Participant> Participant { get; set; }
     }

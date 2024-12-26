@@ -62,8 +62,7 @@ Name="ExitBt" Click="ExitBt_Click"
 Margin="20"></TextBlock>
                         <TextBlock Text="{Binding Tournament.name}"
 Margin="20"></TextBlock>
-                        <TextBlock Text="{Binding status}"
-Margin="20"></TextBlock>
+                   
                      
                     </StackPanel>
                 </DataTemplate>

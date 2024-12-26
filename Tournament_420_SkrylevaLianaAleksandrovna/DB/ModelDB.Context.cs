@@ -26,10 +26,8 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.DB
         }
     
         public virtual DbSet<Format> Format { get; set; }
-        public virtual DbSet<Match> Match { get; set; }
         public virtual DbSet<Party> Party { get; set; }
         public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<Statistic> Statistic { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tournament> Tournament { get; set; }
         public virtual DbSet<Participant> Participant { get; set; }

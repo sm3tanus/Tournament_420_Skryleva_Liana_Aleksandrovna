@@ -55,7 +55,7 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
         }
         private void resetBt_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MainPage());
+            NavigationService.Navigate(new ListTournaments());
 
         }
 
@@ -71,6 +71,7 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
             {
                 App.authUser.idTournament = (ListTournamentsLv.SelectedItem as Tournament).id;
                 App.authUser.played = true;
+                Connection.tournamentDB.SaveChanges();
                 MessageBox.Show("Вы успешно записаны на турнир");
             }
         }

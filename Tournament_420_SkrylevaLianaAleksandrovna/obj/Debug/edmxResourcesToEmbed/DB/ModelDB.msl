@@ -9,17 +9,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Match">
-      <EntityTypeMapping TypeName="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Match">
-        <MappingFragment StoreEntitySet="Match">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="points" ColumnName="points" />
-          <ScalarProperty Name="count" ColumnName="count" />
-          <ScalarProperty Name="finish" ColumnName="finish" />
-          <ScalarProperty Name="idTournament" ColumnName="idTournament" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Party">
       <EntityTypeMapping TypeName="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Party">
         <MappingFragment StoreEntitySet="Party">
@@ -33,17 +22,6 @@
         <MappingFragment StoreEntitySet="Role">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Statistic">
-      <EntityTypeMapping TypeName="TournamentDB_420_SkrylevaLianaAleksandrovnaModel.Statistic">
-        <MappingFragment StoreEntitySet="Statistic">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="victoryCount" ColumnName="victoryCount" />
-          <ScalarProperty Name="defeatCount" ColumnName="defeatCount" />
-          <ScalarProperty Name="countPlay" ColumnName="countPlay" />
-          <ScalarProperty Name="idUser" ColumnName="idUser" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

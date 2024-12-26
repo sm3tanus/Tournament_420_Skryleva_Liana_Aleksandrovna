@@ -7,16 +7,6 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityType Name="Match">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="points" Type="int" />
-    <Property Name="count" Type="int" />
-    <Property Name="finish" Type="bit" />
-    <Property Name="idTournament" Type="int" />
-  </EntityType>
   <EntityType Name="Participant">
     <Key>
       <PropertyRef Name="id" />
@@ -47,16 +37,6 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar" MaxLength="50" />
   </EntityType>
-  <EntityType Name="Statistic">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="victoryCount" Type="int" />
-    <Property Name="defeatCount" Type="int" />
-    <Property Name="countPlay" Type="int" />
-    <Property Name="idUser" Type="int" />
-  </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -79,18 +59,6 @@
     <Property Name="prize" Type="int" />
     <Property Name="minRang" Type="int" />
   </EntityType>
-  <Association Name="FK_Match_Tournament">
-    <End Role="Tournament" Type="Self.Tournament" Multiplicity="0..1" />
-    <End Role="Match" Type="Self.Match" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Tournament">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Match">
-        <PropertyRef Name="idTournament" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Participant_Party">
     <End Role="Party" Type="Self.Party" Multiplicity="0..1" />
     <End Role="Participant" Type="Self.Participant" Multiplicity="*" />
@@ -127,18 +95,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Statistic_Participant">
-    <End Role="Participant" Type="Self.Participant" Multiplicity="0..1" />
-    <End Role="Statistic" Type="Self.Statistic" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Participant">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Statistic">
-        <PropertyRef Name="idUser" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Tournament_Format">
     <End Role="Format" Type="Self.Format" Multiplicity="0..1" />
     <End Role="Tournament" Type="Self.Tournament" Multiplicity="*" />
@@ -153,17 +109,11 @@
   </Association>
   <EntityContainer Name="Хранилище TournamentDB_420_SkrylevaLianaAleksandrovnaModelContainer">
     <EntitySet Name="Format" EntityType="Self.Format" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Match" EntityType="Self.Match" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Participant" EntityType="Self.Participant" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Party" EntityType="Self.Party" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Statistic" EntityType="Self.Statistic" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tournament" EntityType="Self.Tournament" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Match_Tournament" Association="Self.FK_Match_Tournament">
-      <End Role="Tournament" EntitySet="Tournament" />
-      <End Role="Match" EntitySet="Match" />
-    </AssociationSet>
     <AssociationSet Name="FK_Participant_Party" Association="Self.FK_Participant_Party">
       <End Role="Party" EntitySet="Party" />
       <End Role="Participant" EntitySet="Participant" />
@@ -175,10 +125,6 @@
     <AssociationSet Name="FK_Participant_Tournament" Association="Self.FK_Participant_Tournament">
       <End Role="Tournament" EntitySet="Tournament" />
       <End Role="Participant" EntitySet="Participant" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Statistic_Participant" Association="Self.FK_Statistic_Participant">
-      <End Role="Participant" EntitySet="Participant" />
-      <End Role="Statistic" EntitySet="Statistic" />
     </AssociationSet>
     <AssociationSet Name="FK_Tournament_Format" Association="Self.FK_Tournament_Format">
       <End Role="Format" EntitySet="Format" />

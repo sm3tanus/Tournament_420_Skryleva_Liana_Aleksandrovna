@@ -163,5 +163,12 @@ Width="400"
 Height="50"
 FontSize="20"
 Name="addBt" Background="#FF3E946A" Click="addBt_Click">Добавить</Button>
+        <!--<Button Grid.ColumnSpan="2"
+            Grid.Column="5"
+Grid.Row="6"
+Width="400"
+Height="50"
+FontSize="20"
+Name="saveBt" Background="#FF3E946A" Click="addBt_Click">Сохранить</Button>-->
     </Grid>
 </Page>

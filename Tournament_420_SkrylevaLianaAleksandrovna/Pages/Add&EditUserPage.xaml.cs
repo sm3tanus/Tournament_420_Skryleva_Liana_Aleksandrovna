@@ -28,6 +28,7 @@ namespace Tournament_420_SkrylevaLianaAleksandrovna.Pages
             partyCb.ItemsSource = Connection.tournamentDB.Party.ToList();
             tournCb.ItemsSource = Connection.tournamentDB.Tournament.ToList();
 
+
         }
 
         private void addBt_Click(object sender, RoutedEventArgs e)
